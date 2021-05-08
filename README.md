@@ -4,9 +4,9 @@
 
 | Name    | Task                |
 | :----:  | :----:              |
-| Issac   | JS / JSX            |
+| Issac   | BootStrap           |
 | Hyden   | SCSS                |
-| Fernando| BootStrap / Read.Md |
+| Fernando| JS / Read.Md        |
 
 _______________________________________________________________
 

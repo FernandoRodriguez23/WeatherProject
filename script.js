@@ -2,6 +2,11 @@
 
 $(function(){
 
+    //One Function will change between what data is showen depending on window location
+    //Another Funcion will do the "Basic info" and extra info for thet day 
+    //Another Function will push that data to the "7-day" forcast with the basic info
+
+
     let weather = [
         {
         "dt": 1619982000,
