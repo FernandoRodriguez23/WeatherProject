@@ -5,11 +5,21 @@ html{
 
 nav{
     background-color: white;
-    .search-button{
+    height: 70px;
+    .form-control{
+        float: right;
         
+    }
+    .search-button{
+        float: right;
     }
 
     .nav-item{
-        text-decoration: n
+        display: inline-block;
+        justify-content: space-between;
+        padding: 16px;
+        justify-content: center;
+        
+        
     }
 }
