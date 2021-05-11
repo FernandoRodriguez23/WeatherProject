@@ -4,24 +4,26 @@ html {
 
 nav {
   background-color: white;
+  height: 70px;
 }
 
-nav a.nav-days {
-  list-style: none;
-  margin: 0;
-  padding: 16px;
-  overflow: hidden;
-  float: left;
-  text-align: center;
+nav .form-control {
+  float: right;
+}
+
+nav .search-button {
+  float: right;
 }
 
 nav .nav-item {
-  list-style: none;
-  margin: 0;
+  display: inline-block;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 16px;
-  overflow: hidden;
-  float: left;
-  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 div.container-fluid {
