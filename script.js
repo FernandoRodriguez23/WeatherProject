@@ -2,12 +2,8 @@
 
 $(function(){
 
-    //One Function will change between what data is showen depending on window location
-    //Another Funcion will do the "Basic info" and extra info for thet day 
-    //Another Function will push that data to the "7-day" forcast with the basic info
 
-
-    let weather = [
+    let daily = [
         {
         "dt": 1619982000,
         "sunrise": 1619959135,
@@ -302,12 +298,12 @@ $(function(){
             "eve": 83.93,
             "morn": 69.71
         },
-        "pressure": 1006,
-        "humidity": 13,
-        "dew_point": 24.76,
-        "wind_speed": 20.87,
-        "wind_deg": 204,
-        "wind_gust": 24.65,
+        "pressure": 1006, //hPa
+        "humidity": 13, // %
+        "dew_point": 24.76, //degree
+        "wind_speed": 20.87, //Miles oper hour
+        "wind_deg": 204, //ClockWise
+        "wind_gust": 24.65, //Miles per hour
         "weather": [
             {
             "id": 800,
@@ -317,41 +313,82 @@ $(function(){
             }
         ],
         "clouds": 0,
-        "pop": 0,
-        "uvi": 10
+        "pop": 0, //persipatation
+        "uvi": 10 //index
         }
     ];
 
-    //Variables
+    //Variables for data 
     let $day;
+
+    //Basic
     let $general = $(`#basic`);
+    let $headerDay = $(`#header-day`);
+    let $feelsLike = $(`#feels-like`);
+    let $discription = $(`#discription`);
+    let $minMax = $(`#min-max`);
+    let $timeOfDay = $(`#time-of-day`);
+
+    //Extra
     let $extra = $(`#extra`);
+    let $pressure = $(`#pressure`);
+    let $huminity = $(`#huminity`);
+    let $drewPoint = $(`#drew-point`);
+    let $windSpeed = $(`#wind-speed`);
+    let $windDeg = $(`#wind-deg`);
+    let windGust = $(`#wind-gust`);
+
+    
+    //variable for time
+    let dayTime = new Date();
+    let time = dayTime.getHours();
 
 
     //Will check what day it is 
     function isDay(){
-        if(weather.dt === 1619982000){
-            $general.append("<p>Monday</p>")
-            $('#basic').append(`Min ${weather.min}° | Max ${weather.max}°`)
-        }else{
-            
+        if(daily[0].dt === 1619982000){
+
+            //Checks What time of day it is and prints coresponding temp data
+
+            //==========================================================================//
+            //This is for the Basic Info
+
+            if(time <= 6){
+                $timeOfDay.append(`${daily[0].temp.morn}°`);
+            }if(time > 7 && time <= 14){
+                $timeOfDay.append(`${daily[0].temp.day}°`);
+            }if(time > 14 && time <= 20){
+                $timeOfDay.append(`${daily[0].temp.eve}°`);
+            }if(time > 20){
+                $timeOfDay.append(`${daily[0].temp.night}°`);
+            }
+
+            //Check time and prints feels like data
+            if(time <= 6){
+                $feelsLike.append(`Feels like  ${daily[0].feels_like.morn}°`);
+            }if(time > 7 && time <= 14){
+                $feelsLike.append(`Feels like  ${daily[0].feels_like.day}°`);
+            }if(time > 14 && time <= 20){
+                $feelsLike.append(`Feels like  ${daily[0].feels_like.eve}°`);
+            }if(time > 20){
+                $feelsLike.append(`Feels like  ${daily[0].feels_like.night}°`);
+            }
+
+            $headerDay.prepend("Today");
+            $discription.append(`${daily[0].weather[0].description}`);
+            $minMax.append(`<p>Min ${daily[0].temp.min}° | Max ${daily[0].temp.max}°</p>`);
+
+            //=====================================================================================//
+
+            //This is for the extra data
+
+            $pressure.append(`Pressure ${daily[0].pressure} hPa`);
+            $huminity.append(`Huminity ${daily[0].humidity} %`);
+
         }
     }
 
-
-    function basic() {
-        
-
-        
-        $('#basic').append("Helo")
-
-
-
-
-    }
-
     isDay();
-    //basic();
 
 
 

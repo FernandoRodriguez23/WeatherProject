@@ -15,6 +15,10 @@ _______________________________________________________________
 > General
 > 
 > - ~~Find Icons~~
+>
+> - Find a way to space text
+> 
+> - Build the rest of the Outer structure
 
 #### Desktop
 
