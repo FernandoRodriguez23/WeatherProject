@@ -1,5 +1,5 @@
 html {
-  background: linear-gradient(120deg, #91d5ec 20%, #e9e9aa 40%, #e79c5a 90%);
-  height: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#258fc9), to(#f2fcfe));
+  background-image: linear-gradient(90deg, #258fc9, #f2fcfe);
 }
 /*# sourceMappingURL=style.css.map */
