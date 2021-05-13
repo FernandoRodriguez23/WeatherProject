@@ -315,6 +315,12 @@ $(function(){
         "clouds": 0,
         "pop": 0, //persipatation
         "uvi": 10 //index
+        },
+        {
+            "lat": 33.53,
+            "lon": -112.18,
+            "timezone": "America/Phoenix",
+
         }
     ];
 
@@ -328,15 +334,18 @@ $(function(){
     let $discription = $(`#discription`);
     let $minMax = $(`#min-max`);
     let $timeOfDay = $(`#time-of-day`);
+    let $location = $(`#location`);
 
     //Extra
     let $extra = $(`#extra`);
     let $pressure = $(`#pressure`);
     let $huminity = $(`#huminity`);
     let $drewPoint = $(`#drew-point`);
+    let $pop = $(`#pop`);
     let $windSpeed = $(`#wind-speed`);
     let $windDeg = $(`#wind-deg`);
-    let windGust = $(`#wind-gust`);
+    let $windGust = $(`#wind-gust`);
+    let $uvi = $(`#uvi`);
 
     
     //variable for time
@@ -345,7 +354,7 @@ $(function(){
 
 
     //Will check what day it is 
-    function isDay(){
+    function isDay0(){
         if(daily[0].dt === 1619982000){
 
             //Checks What time of day it is and prints coresponding temp data
@@ -375,6 +384,11 @@ $(function(){
             }
 
             $headerDay.prepend("Today");
+            let location = `${daily[8].timezone}`
+            if(location === "America/Phoenix"){
+                $location.append("Phoenix");
+            }
+            
             $discription.append(`${daily[0].weather[0].description}`);
             $minMax.append(`<p>Min ${daily[0].temp.min}° | Max ${daily[0].temp.max}°</p>`);
 
@@ -382,13 +396,115 @@ $(function(){
 
             //This is for the extra data
 
-            $pressure.append(`Pressure ${daily[0].pressure} hPa`);
-            $huminity.append(`Huminity ${daily[0].humidity} %`);
+            $pressure.append(`${daily[0].pressure} hPa`);
+            $huminity.append(`${daily[0].humidity}%`);
+            $drewPoint.append(`${daily[0].dew_point}°`);
+            $pop.append(`${daily[0].pop}%`);
+            $windSpeed.append(`${daily[0].wind_speed} mph`);
+
+            let windDegree = `${daily[0].wind_deg}`;
+            if(windDegree < 90){
+                $windDeg.append(`${daily[0].wind_deg}° NE`);
+            }if(windDegree < 180 && windDegree > 90){
+                $windDeg.append(`${daily[0].wind_deg}° SE`);
+            }if(windDegree < 270 && windDegree > 180){
+                $windDeg.append(`${daily[0].wind_deg}° SW`);
+            }if(windDegree < 360 && windDegree > 270){
+                $windDeg.append(`${daily[0].wind_deg}° NW`);
+            }
+
+            $windGust.append(`${daily[0].wind_gust} mph`);
+            let uVIndex = `${daily[0].uvi}`;
+            if(uVIndex <= 2){
+                $uvi.append(`${daily[0].uvi} Low`).addClass("text-success")
+            }if(uVIndex <= 5){
+                $uvi.append(`${daily[0].uvi} Moderate`).addClass("text-warning")
+            }if(uVIndex <= 7){
+                $uvi.append(`${daily[0].uvi} High`).addClass("text-orange")
+            }if(uVIndex > 7){
+                $uvi.append(`${daily[0].uvi} Very High`).addClass("text-danger")
+            }
 
         }
     }
 
-    isDay();
+    //Variables for 7-day forcast (Static)
+    let $day0Header = $(`#day0-header`);
+    let $day0High = $(`#day0-high`);
+    let $day0Low = $(`#day0-low`);
+    let $discription0 = $(`#discription0`);//Add to other
+
+    let $day1Header = $(`#day1-header`);
+    let $day1High = $(`#day1-high`);
+    let $day1Low = $(`#day1-low`);
+
+    let $day2Header = $(`#day2-header`);
+    let $day2High = $(`#day2-high`);
+    let $day2Low = $(`#day2-low`);
+
+    let $day3Header = $(`#day3-header`);
+    let $day3High = $(`#day3-high`);
+    let $day3Low = $(`#day3-low`);
+
+    let $day4Header = $(`#day4-header`);
+    let $day4High = $(`#day4-high`);
+    let $day4Low = $(`#day4-low`);
+
+    let $day5Header = $(`#day5-header`);
+    let $day5High = $(`#day5-high`);
+    let $day5Low = $(`#day5-low`);
+
+    let $day6Header = $(`#day6-header`);
+    let $day6High = $(`#day6-high`);
+    let $day6Low = $(`#day6-low`);
+
+    let $day7Header = $(`#day7-header`);
+    let $day7High = $(`#day7-high`);
+    let $day7Low = $(`#day7-low`);
+
+    //Pushes simple date for the 7-day forcast (static)
+    function forcast(){
+        $day0Header.append("Today");
+        $day0High.append(`Max ${daily[0].temp.max}°`);
+        $day0Low.append(`Min ${daily[0].temp.min}°`);
+
+        $day1Header.append("Tuesday");
+        $day1High.append(`Max ${daily[1].temp.max}°`);
+        $day1Low.append(`Min ${daily[1].temp.min}°`);
+
+        $day2Header.append("Wednesday");
+        $day2High.append(`Max ${daily[2].temp.max}°`);
+        $day2Low.append(`Min ${daily[2].temp.min}°`);
+
+        $day3Header.append("Thursday");
+        $day3High.append(`Max ${daily[3].temp.max}°`);
+        $day3Low.append(`Min ${daily[3].temp.min}°`);
+
+        $day4Header.append("Friday");
+        $day4High.append(`Max ${daily[4].temp.max}°`);
+        $day4Low.append(`Min ${daily[4].temp.min}°`);
+
+        $day5Header.append("Saturday");
+        $day5High.append(`Max ${daily[5].temp.max}°`);
+        $day5Low.append(`Min ${daily[5].temp.min}°`);
+
+        $day6Header.append("Sunday");
+        $day6High.append(`Max ${daily[6].temp.max}°`);
+        $day6Low.append(`Min ${daily[6].temp.min}°`);
+
+        $day7Header.append("Monday");
+        $day7High.append(`Max ${daily[7].temp.max}°`);
+        $day7Low.append(`Min ${daily[7].temp.min}°`);
+    }
+
+
+
+
+
+    forcast();
+    isDay0();
+
+
 
 
 
