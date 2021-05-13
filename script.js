@@ -428,82 +428,285 @@ $(function(){
         }
     }
 
+    function isDay1(){
+        if(daily[1].dt === 1620068400){
+
+            //Checks What time of day it is and prints coresponding temp data
+
+            //==========================================================================//
+            //This is for the Basic Info
+
+            if(time <= 6){
+                $timeOfDay.append(`${daily[1].temp.morn}°`);
+            }if(time > 7 && time <= 14){
+                $timeOfDay.append(`${daily[1].temp.day}°`);
+            }if(time > 14 && time <= 20){
+                $timeOfDay.append(`${daily[1].temp.eve}°`);
+            }if(time > 20){
+                $timeOfDay.append(`${daily[1].temp.night}°`);
+            }
+
+            //Check time and prints feels like data
+            if(time <= 6){
+                $feelsLike.append(`Feels like  ${daily[1].feels_like.morn}°`);
+            }if(time > 7 && time <= 14){
+                $feelsLike.append(`Feels like  ${daily[1].feels_like.day}°`);
+            }if(time > 14 && time <= 20){
+                $feelsLike.append(`Feels like  ${daily[1].feels_like.eve}°`);
+            }if(time > 20){
+                $feelsLike.append(`Feels like  ${daily[1].feels_like.night}°`);
+            }
+
+            $headerDay.prepend("Tuesday");
+            let location = `${daily[8].timezone}`
+            if(location === "America/Phoenix"){
+                $location.append("Phoenix");
+            }
+            
+            $discription.append(`${daily[1].weather[0].description}`);
+            $minMax.append(`<p>Min ${daily[1].temp.min}° | Max ${daily[1].temp.max}°</p>`);
+
+            //=====================================================================================//
+
+            //This is for the extra data
+
+            $pressure.append(`${daily[1].pressure} hPa`);
+            $huminity.append(`${daily[1].humidity}%`);
+            $drewPoint.append(`${daily[1].dew_point}°`);
+            $pop.append(`${daily[1].pop}%`);
+            $windSpeed.append(`${daily[1].wind_speed} mph`);
+
+            let windDegree = `${daily[1].wind_deg}`;
+            if(windDegree < 90){
+                $windDeg.append(`${daily[1].wind_deg}° NE`);
+            }if(windDegree < 180 && windDegree > 90){
+                $windDeg.append(`${daily[1].wind_deg}° SE`);
+            }if(windDegree < 270 && windDegree > 180){
+                $windDeg.append(`${daily[1].wind_deg}° SW`);
+            }if(windDegree < 360 && windDegree > 270){
+                $windDeg.append(`${daily[1].wind_deg}° NW`);
+            }
+
+            $windGust.append(`${daily[1].wind_gust} mph`);
+            let uVIndex = `${daily[1].uvi}`;
+            if(uVIndex <= 2){
+                $uvi.append(`${daily[1].uvi} Low`).addClass("text-success")
+            }if(uVIndex <= 5){
+                $uvi.append(`${daily[1].uvi} Moderate`).addClass("text-warning")
+            }if(uVIndex <= 7){
+                $uvi.append(`${daily[1].uvi} High`).addClass("text-orange")
+            }if(uVIndex > 7){
+                $uvi.append(`${daily[1].uvi} Very High`).addClass("text-danger")
+            }
+
+        }
+    }
+
+    function isDay2(){
+        if(daily[2].dt === 1620154800){
+
+            //Checks What time of day it is and prints coresponding temp data
+
+            //==========================================================================//
+            //This is for the Basic Info
+
+            if(time <= 6){
+                $timeOfDay.append(`${daily[2].temp.morn}°`);
+            }if(time > 7 && time <= 14){
+                $timeOfDay.append(`${daily[2].temp.day}°`);
+            }if(time > 14 && time <= 20){
+                $timeOfDay.append(`${daily[2].temp.eve}°`);
+            }if(time > 20){
+                $timeOfDay.append(`${daily[2].temp.night}°`);
+            }
+
+            //Check time and prints feels like data
+            if(time <= 6){
+                $feelsLike.append(`Feels like  ${daily[2].feels_like.morn}°`);
+            }if(time > 7 && time <= 14){
+                $feelsLike.append(`Feels like  ${daily[2].feels_like.day}°`);
+            }if(time > 14 && time <= 20){
+                $feelsLike.append(`Feels like  ${daily[2].feels_like.eve}°`);
+            }if(time > 20){
+                $feelsLike.append(`Feels like  ${daily[2].feels_like.night}°`);
+            }
+
+            $headerDay.prepend("Wednesday");
+            let location = `${daily[8].timezone}`
+            if(location === "America/Phoenix"){
+                $location.append("Phoenix");
+            }
+            
+            $discription.append(`${daily[2].weather[0].description}`);
+            $minMax.append(`<p>Min ${daily[2].temp.min}° | Max ${daily[2].temp.max}°</p>`);
+
+            //=====================================================================================//
+
+            //This is for the extra data
+
+            $pressure.append(`${daily[2].pressure} hPa`);
+            $huminity.append(`${daily[2].humidity}%`);
+            $drewPoint.append(`${daily[2].dew_point}°`);
+            $pop.append(`${daily[2].pop}%`);
+            $windSpeed.append(`${daily[2].wind_speed} mph`);
+
+            let windDegree = `${daily[2].wind_deg}`;
+            if(windDegree < 90){
+                $windDeg.append(`${daily[2].wind_deg}° NE`);
+            }if(windDegree < 180 && windDegree > 90){
+                $windDeg.append(`${daily[2].wind_deg}° SE`);
+            }if(windDegree < 270 && windDegree > 180){
+                $windDeg.append(`${daily[2].wind_deg}° SW`);
+            }if(windDegree < 360 && windDegree > 270){
+                $windDeg.append(`${daily[2].wind_deg}° NW`);
+            }
+
+            $windGust.append(`${daily[2].wind_gust} mph`);
+            let uVIndex = `${daily[2].uvi}`;
+            if(uVIndex <= 2){
+                $uvi.append(`${daily[2].uvi} Low`).addClass("text-success")
+            }if(uVIndex <= 5){
+                $uvi.append(`${daily[2].uvi} Moderate`).addClass("text-warning")
+            }if(uVIndex <= 7){
+                $uvi.append(`${daily[2].uvi} High`).addClass("text-orange")
+            }if(uVIndex > 7){
+                $uvi.append(`${daily[1].uvi} Very High`).addClass("text-danger")
+            }
+
+        }
+    }
+
     //Variables for 7-day forcast (Static)
     let $day0Header = $(`#day0-header`);
     let $day0High = $(`#day0-high`);
     let $day0Low = $(`#day0-low`);
-    let $discription0 = $(`#discription0`);//Add to other
+    let $discription0 = $(`#discription0`);
+    let $pop0 = $(`#pop-0`);
 
     let $day1Header = $(`#day1-header`);
     let $day1High = $(`#day1-high`);
     let $day1Low = $(`#day1-low`);
+    let $discription1 = $(`#discription1`);
+    let $pop1 = $(`#pop-1`);
 
     let $day2Header = $(`#day2-header`);
     let $day2High = $(`#day2-high`);
     let $day2Low = $(`#day2-low`);
+    let $discription2 = $(`#discription2`);
+    let $pop2 = $(`#pop-2`);
 
     let $day3Header = $(`#day3-header`);
     let $day3High = $(`#day3-high`);
     let $day3Low = $(`#day3-low`);
+    let $discription3 = $(`#discription3`);
+    let $pop3 = $(`#pop-3`);
 
     let $day4Header = $(`#day4-header`);
     let $day4High = $(`#day4-high`);
     let $day4Low = $(`#day4-low`);
+    let $discription4 = $(`#discription4`);
+    let $pop4 = $(`#pop-4`);
 
     let $day5Header = $(`#day5-header`);
     let $day5High = $(`#day5-high`);
     let $day5Low = $(`#day5-low`);
+    let $discription5 = $(`#discription5`);
+    let $pop5 = $(`#pop-5`);
 
     let $day6Header = $(`#day6-header`);
     let $day6High = $(`#day6-high`);
     let $day6Low = $(`#day6-low`);
+    let $discription6 = $(`#discription6`);
+    let $pop6 = $(`#pop-6`);
 
     let $day7Header = $(`#day7-header`);
     let $day7High = $(`#day7-high`);
     let $day7Low = $(`#day7-low`);
+    let $discription7 = $(`#discription7`);
+    let $pop7 = $(`#pop-7`);
 
     //Pushes simple date for the 7-day forcast (static)
     function forcast(){
         $day0Header.append("Today");
         $day0High.append(`Max ${daily[0].temp.max}°`);
         $day0Low.append(`Min ${daily[0].temp.min}°`);
+        $discription0.append(`${daily[0].weather[0].description}`);
+        $pop0.prepend(`${daily[0].pop}%`);
 
         $day1Header.append("Tuesday");
         $day1High.append(`Max ${daily[1].temp.max}°`);
         $day1Low.append(`Min ${daily[1].temp.min}°`);
+        $discription1.append(`${daily[1].weather[0].description}`);
+        $pop1.prepend(`${daily[1].pop}%`);
 
         $day2Header.append("Wednesday");
         $day2High.append(`Max ${daily[2].temp.max}°`);
         $day2Low.append(`Min ${daily[2].temp.min}°`);
+        $discription2.append(`${daily[2].weather[0].description}`);
+        $pop2.prepend(`${daily[2].pop}%`);
 
         $day3Header.append("Thursday");
         $day3High.append(`Max ${daily[3].temp.max}°`);
         $day3Low.append(`Min ${daily[3].temp.min}°`);
+        $discription3.append(`${daily[3].weather[0].description}`);
+        $pop3.prepend(`${daily[3].pop}%`);
 
         $day4Header.append("Friday");
         $day4High.append(`Max ${daily[4].temp.max}°`);
         $day4Low.append(`Min ${daily[4].temp.min}°`);
+        $discription4.append(`${daily[4].weather[0].description}`);
+        $pop4.prepend(`${daily[4].pop}%`);
 
         $day5Header.append("Saturday");
         $day5High.append(`Max ${daily[5].temp.max}°`);
         $day5Low.append(`Min ${daily[5].temp.min}°`);
+        $discription5.append(`${daily[5].weather[0].description}`);
+        $pop5.prepend(`${daily[5].pop}%`);
 
         $day6Header.append("Sunday");
         $day6High.append(`Max ${daily[6].temp.max}°`);
         $day6Low.append(`Min ${daily[6].temp.min}°`);
+        $discription6.append(`${daily[6].weather[0].description}`);
+        $pop6.prepend(`${daily[6].pop}%`);
 
         $day7Header.append("Monday");
         $day7High.append(`Max ${daily[7].temp.max}°`);
         $day7Low.append(`Min ${daily[7].temp.min}°`);
+        $discription7.append(`${daily[7].weather[0].description}`);
+        $pop7.prepend(`${daily[7].pop}%`);
     }
 
 
+    let input = "Page path is " + window.location.pathname;
 
-
-
-    forcast();
+    input = input.split("/")
+    input = input.splice(", ");
+    
+    let lastInput = input[input.length - 1];
+    
+    
+    if (lastInput == "test.html") {
+    console.log("test1");
     isDay0();
+    forcast();
+    } if (lastInput == "test2.html") {
+    console.log("test2");
+    isDay1();
+    forcast();
+    } if (lastInput == "test3.html") {
+        console.log("test3");
+        isDay2();
+        forcast();
+    }
+    
 
+
+    //redirectPages();
+    
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
 
 
 
