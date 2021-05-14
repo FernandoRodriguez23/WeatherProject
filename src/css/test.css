@@ -13,4 +13,12 @@
 .day {
   height: 300px;
 }
+
+.droplet {
+  color: #258fc9;
+}
+
+.tooltip {
+  font-size: 2rem;
+}
 /*# sourceMappingURL=test.css.map */
