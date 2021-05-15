@@ -999,51 +999,51 @@ $(function(){
 
     //Pushes simple date for the 7-day forcast (static)
     function forcast(){
-        $day0Header.append("Monday");
-        $day0High.append(`Max ${daily[0].temp.max}°`);
-        $day0Low.append(`Min ${daily[0].temp.min}°`);
+        $day0Header.append("Mon");
+        $day0High.append(`H: ${daily[0].temp.max}°`);
+        $day0Low.append(`L: ${daily[0].temp.min}°`);
         $discription0.append(`${daily[0].weather[0].description}`);
         $pop0.prepend(`${daily[0].pop}%`);
 
-        $day1Header.append("Tuesday");
-        $day1High.append(`Max ${daily[1].temp.max}°`);
-        $day1Low.append(`Min ${daily[1].temp.min}°`);
+        $day1Header.append("Tue");
+        $day1High.append(`H: ${daily[1].temp.max}°`);
+        $day1Low.append(`L: ${daily[1].temp.min}°`);
         $discription1.append(`${daily[1].weather[0].description}`);
         $pop1.prepend(`${daily[1].pop}%`);
 
-        $day2Header.append("Wednesday");
-        $day2High.append(`Max ${daily[2].temp.max}°`);
-        $day2Low.append(`Min ${daily[2].temp.min}°`);
+        $day2Header.append("Wed");
+        $day2High.append(`H: ${daily[2].temp.max}°`);
+        $day2Low.append(`L: ${daily[2].temp.min}°`);
         $discription2.append(`${daily[2].weather[0].description}`);
         $pop2.prepend(`${daily[2].pop}%`);
 
-        $day3Header.append("Thursday");
-        $day3High.append(`Max ${daily[3].temp.max}°`);
-        $day3Low.append(`Min ${daily[3].temp.min}°`);
+        $day3Header.append("Thu");
+        $day3High.append(`H: ${daily[3].temp.max}°`);
+        $day3Low.append(`L: ${daily[3].temp.min}°`);
         $discription3.append(`${daily[3].weather[0].description}`);
         $pop3.prepend(`${daily[3].pop}%`);
 
-        $day4Header.append("Friday");
-        $day4High.append(`Max ${daily[4].temp.max}°`);
-        $day4Low.append(`Min ${daily[4].temp.min}°`);
+        $day4Header.append("Fri");
+        $day4High.append(`H: ${daily[4].temp.max}°`);
+        $day4Low.append(`L: ${daily[4].temp.min}°`);
         $discription4.append(`${daily[4].weather[0].description}`);
         $pop4.prepend(`${daily[4].pop}%`);
 
-        $day5Header.append("Saturday");
-        $day5High.append(`Max ${daily[5].temp.max}°`);
-        $day5Low.append(`Min ${daily[5].temp.min}°`);
+        $day5Header.append("Sat");
+        $day5High.append(`H: ${daily[5].temp.max}°`);
+        $day5Low.append(`L: ${daily[5].temp.min}°`);
         $discription5.append(`${daily[5].weather[0].description}`);
         $pop5.prepend(`${daily[5].pop}%`);
 
-        $day6Header.append("Sunday");
-        $day6High.append(`Max ${daily[6].temp.max}°`);
-        $day6Low.append(`Min ${daily[6].temp.min}°`);
+        $day6Header.append("Sun");
+        $day6High.append(`H: ${daily[6].temp.max}°`);
+        $day6Low.append(`L: ${daily[6].temp.min}°`);
         $discription6.append(`${daily[6].weather[0].description}`);
         $pop6.prepend(`${daily[6].pop}%`);
 
-        $day7Header.append("Monday");
-        $day7High.append(`Max ${daily[7].temp.max}°`);
-        $day7Low.append(`Min ${daily[7].temp.min}°`);
+        $day7Header.append("Mon");
+        $day7High.append(`H: ${daily[7].temp.max}°`);
+        $day7Low.append(`L: ${daily[7].temp.min}°`);
         $discription7.append(`${daily[7].weather[0].description}`);
         $pop7.prepend(`${daily[7].pop}%`);
     }

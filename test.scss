@@ -1,8 +1,21 @@
 
 
-.container-fluid{
-    width: 90%;
+//footer
+
+
+//end footer
+
+.navbar-brand{
+    margin-top: 15px;
 }
+
+
+.container-fluid{
+    width: 91%;
+    background-image: linear-gradient(90deg,#258fc9, #f2fcfe);
+
+}
+
 
 .icon-sun{
     color: orange;
@@ -12,8 +25,16 @@
     color: orange;
 }
 
+.basic{
+    border: 2px black solid;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
 .day{
-    height: 300px;
+    max-height: 450px;
+    border: 2px black solid;
+    border-radius: 5px;
 }
 
 .droplet{
