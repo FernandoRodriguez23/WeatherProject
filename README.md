@@ -18,13 +18,15 @@ _______________________________________________________________
 >
 > - ~~Find a way to space text~~
 > 
-> - Build the rest of the Outer structure
+> - ~~Build the rest of the Outer structure~~
 >
-> - Fix responsive design in the 7-day forcast
+> - ~~Fix responsive design in the 7-day forcast~~
 >
 > - Add updated bootstrap
 >
 > - ~~jQuery done~~
+>
+> - Responsive design for ads
 
 #### Desktop
 
