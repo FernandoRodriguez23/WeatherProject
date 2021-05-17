@@ -1089,7 +1089,10 @@ $(function(){
         console.log("test8");
         isDay7();
         forcast();
-    }
+    } if (lastInput == "7daytest.html") {
+        console.log("7daytest");
+        forcast();
+    } 
     
 
 
