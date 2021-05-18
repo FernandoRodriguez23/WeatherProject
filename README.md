@@ -59,6 +59,6 @@ _______________________________________________________________
 
 #### GitHub Link
 
-> GitHub Pages[https://fernandorodriguez23.github.io/WeatherProject/]
+> [GitHub Pages](https://fernandorodriguez23.github.io/WeatherProject/)
 
 
