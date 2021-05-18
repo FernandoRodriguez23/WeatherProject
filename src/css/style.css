@@ -1,16 +1,16 @@
-.navbar-brand {
-  margin-top: 15px;
-}
-
-.navbar {
-  font-size: 1.4rem;
-}
-
 .container-fluid {
   width: 91%;
   background-image: -webkit-gradient(linear, left top, right top, from(#258fc9), to(#f2fcfe));
   background-image: linear-gradient(90deg, #258fc9, #f2fcfe);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container-fluid .navbar-brand {
+  margin-top: 15px;
+}
+
+.container-fluid .navbar {
+  font-size: 1.4rem;
 }
 
 .container-fluid .basic {
