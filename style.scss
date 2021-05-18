@@ -1,14 +1,69 @@
-html{
-    background-image: linear-gradient(90deg,#258fc9, #f2fcfe);
-}
 
-//footer
-
-
-
-//end footer
+//NavBar Styles
 
 .navbar-brand{
     margin-top: 15px;
 }
+.navbar{
+    font-size: 1.4rem;
+}
+
+
+//Container styles
+.container-fluid{
+    width: 91%;
+    background-image: linear-gradient(90deg,#258fc9, #f2fcfe);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
+    //Styles for "General Info card"
+    .basic{
+        border: 2px black solid;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        box-shadow: 2px 2px 2px black;
+    }
+    
+    //7-day forcast styles
+    .day{
+        max-height: 450px;
+        border: 2px black solid;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px black;
+    }
+    
+    //Misc
+    .droplet{
+        color: #258fc9;
+    }
+    .tooltip{
+        font-size: .8rem;
+    }
+    .icon-sun{
+        color: orange;
+    }
+    
+    .text-orange{
+        color: orange;
+    }
+    
+}
+
+
+
+
+
+
+
+// #day0-panel{
+//     &:hover{
+//         cursor: pointer;
+//     }
+// }
+
+// #day1-panel{
+//     &:hover{
+//         cursor: pointer;
+//     }
+// }
 

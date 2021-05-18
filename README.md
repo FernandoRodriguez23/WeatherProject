@@ -26,7 +26,7 @@ _______________________________________________________________
 >
 > - ~~jQuery done~~
 >
-> - Responsive design for ads
+> - ~~Responsive design for ads~~
 
 #### Desktop
 

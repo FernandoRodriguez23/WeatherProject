@@ -1057,40 +1057,39 @@ $(function(){
     let lastInput = input[input.length - 1];
     
     
-    if (lastInput == "test.html") {
+    if (lastInput == "index.html") {
     console.log("test1");
     isDay0();
     forcast();
-    } if (lastInput == "test2.html") {
+    } if (lastInput == "tuesday.html") {
     console.log("test2");
     isDay1();
     forcast();
-    } if (lastInput == "test3.html") {
+    } if (lastInput == "wednesday.html") {
         console.log("test3");
         isDay2();
         forcast();
-    }  if (lastInput == "test4.html") {
+    }  if (lastInput == "thursday.html") {
         console.log("test4");
         isDay3();
         forcast();
-    }  if (lastInput == "test5.html") {
+    }  if (lastInput == "friday.html") {
         console.log("test5");
         isDay4();
         forcast();
-    }  if (lastInput == "test6.html") {
+    }  if (lastInput == "saturday.html") {
         console.log("test6");
         isDay5();
         forcast();
-    }  if (lastInput == "test7.html") {
+    }  if (lastInput == "sunday.html") {
         console.log("test7");
         isDay6();
         forcast();
-    }  if (lastInput == "test8.html") {
+    }  if (lastInput == "monday.html") {
         console.log("test8");
         isDay7();
         forcast();
-    } if (lastInput == "7daytest.html") {
-        console.log("7daytest");
+    } if (lastInput == "7dayforcast.html") {
         forcast();
     } 
     
