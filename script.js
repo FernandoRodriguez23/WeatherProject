@@ -1048,7 +1048,6 @@ $(function(){
         $pop7.prepend(`${daily[7].pop}%`);
     }
 
-    isDay0();
 
     let input = "Page path is " + window.location.pathname;
 
