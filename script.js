@@ -1058,35 +1058,27 @@ $(function(){
     
     
     if (lastInput == "index.html") {
-    console.log("test1");
-    isDay0();
-    forcast();
+        isDay0();
+        forcast();
     } if (lastInput == "tuesday.html") {
-    console.log("test2");
-    isDay1();
-    forcast();
+        isDay1();
+        forcast();
     } if (lastInput == "wednesday.html") {
-        console.log("test3");
         isDay2();
         forcast();
     }  if (lastInput == "thursday.html") {
-        console.log("test4");
         isDay3();
         forcast();
     }  if (lastInput == "friday.html") {
-        console.log("test5");
         isDay4();
         forcast();
     }  if (lastInput == "saturday.html") {
-        console.log("test6");
         isDay5();
         forcast();
     }  if (lastInput == "sunday.html") {
-        console.log("test7");
         isDay6();
         forcast();
     }  if (lastInput == "monday.html") {
-        console.log("test8");
         isDay7();
         forcast();
     } if (lastInput == "7dayforcast.html") {
