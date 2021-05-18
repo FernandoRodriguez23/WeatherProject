@@ -7,6 +7,7 @@
 | Issac   | BootStrap           |
 | Hyden   | SCSS                |
 | Fernando| JS / Read.Md        |
+| Ali     | SCSS / Bootstrap    |
 
 _______________________________________________________________
 
