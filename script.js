@@ -326,6 +326,7 @@ $(function(){
 
     //Variables for data 
     let $day;
+    window.stop();
 
     //Basic
     let $general = $(`#basic`);
