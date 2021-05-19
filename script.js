@@ -327,6 +327,11 @@ $(function(){
     //Variables for data 
     let $day;
 
+    function refreshHtml() {
+        location.reload();
+    }
+    refreshHtml();
+
     //Basic
     let $general = $(`#basic`);
     let $headerDay = $(`#header-day`);
