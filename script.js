@@ -366,24 +366,24 @@ $(function(){
             //This is for the Basic Info
 
             if(time <= 6){
-                $timeOfDay.append(`${daily[0].temp.morn}°`);
+                $timeOfDay.append(`${daily[0].temp.morn}°f`);
             }if(time > 7 && time <= 14){
-                $timeOfDay.append(`${daily[0].temp.day}°`);
+                $timeOfDay.append(`${daily[0].temp.day}°f`);
             }if(time > 14 && time <= 20){
-                $timeOfDay.append(`${daily[0].temp.eve}°`);
+                $timeOfDay.append(`${daily[0].temp.eve}°f`);
             }if(time > 20){
-                $timeOfDay.append(`${daily[0].temp.night}°`);
+                $timeOfDay.append(`${daily[0].temp.night}°f`);
             }
 
             //Check time and prints feels like data
             if(time <= 6){
-                $feelsLike.append(`Feels like  ${daily[0].feels_like.morn}°`);
+                $feelsLike.append(`Feels like  ${daily[0].feels_like.morn}°f`);
             }if(time > 7 && time <= 14){
-                $feelsLike.append(`Feels like  ${daily[0].feels_like.day}°`);
+                $feelsLike.append(`Feels like  ${daily[0].feels_like.day}°f`);
             }if(time > 14 && time <= 20){
-                $feelsLike.append(`Feels like  ${daily[0].feels_like.eve}°`);
+                $feelsLike.append(`Feels like  ${daily[0].feels_like.eve}°f`);
             }if(time > 20){
-                $feelsLike.append(`Feels like  ${daily[0].feels_like.night}°`);
+                $feelsLike.append(`Feels like  ${daily[0].feels_like.night}°f`);
             }
 
             $headerDay.prepend("Today");
@@ -393,13 +393,14 @@ $(function(){
             }
             
             $discription.append(`${daily[0].weather[0].description}`);
-            $minMax.append(`<p>Min ${daily[0].temp.min}° | Max ${daily[0].temp.max}°</p>`);
+            $minMax.append(`<p>Min ${daily[0].temp.min}°f | Max ${daily[0].temp.max}°f</p>`);
 
             //=====================================================================================//
 
             //This is for the extra data
 
-            $pressure.append(`${daily[0].pressure} hPa`);
+            $pressure.append(`${daily[0].clouds} %`);
+
             $huminity.append(`${daily[0].humidity}%`);
             $drewPoint.append(`${daily[0].dew_point}°`);
             $pop.append(`${daily[0].pop}%`);
@@ -440,24 +441,24 @@ $(function(){
             //This is for the Basic Info
 
             if(time <= 6){
-                $timeOfDay.append(`${daily[1].temp.morn}°`);
+                $timeOfDay.append(`${daily[1].temp.morn}°f`);
             }if(time > 7 && time <= 14){
-                $timeOfDay.append(`${daily[1].temp.day}°`);
+                $timeOfDay.append(`${daily[1].temp.day}°f`);
             }if(time > 14 && time <= 20){
-                $timeOfDay.append(`${daily[1].temp.eve}°`);
+                $timeOfDay.append(`${daily[1].temp.eve}°f`);
             }if(time > 20){
-                $timeOfDay.append(`${daily[1].temp.night}°`);
+                $timeOfDay.append(`${daily[1].temp.night}°f`);
             }
 
             //Check time and prints feels like data
             if(time <= 6){
-                $feelsLike.append(`Feels like  ${daily[1].feels_like.morn}°`);
+                $feelsLike.append(`Feels like  ${daily[1].feels_like.morn}°f`);
             }if(time > 7 && time <= 14){
-                $feelsLike.append(`Feels like  ${daily[1].feels_like.day}°`);
+                $feelsLike.append(`Feels like  ${daily[1].feels_like.day}°f`);
             }if(time > 14 && time <= 20){
-                $feelsLike.append(`Feels like  ${daily[1].feels_like.eve}°`);
+                $feelsLike.append(`Feels like  ${daily[1].feels_like.eve}°f`);
             }if(time > 20){
-                $feelsLike.append(`Feels like  ${daily[1].feels_like.night}°`);
+                $feelsLike.append(`Feels like  ${daily[1].feels_like.night}°f`);
             }
 
             $headerDay.prepend("Tuesday");
@@ -467,15 +468,15 @@ $(function(){
             }
             
             $discription.append(`${daily[1].weather[0].description}`);
-            $minMax.append(`<p>Min ${daily[1].temp.min}° | Max ${daily[1].temp.max}°</p>`);
+            $minMax.append(`<p>Min ${daily[1].temp.min}°f | Max ${daily[1].temp.max}°f</p>`);
 
             //=====================================================================================//
 
             //This is for the extra data
 
-            $pressure.append(`${daily[1].pressure} hPa`);
+            $pressure.append(`${daily[1].clouds}%`);
             $huminity.append(`${daily[1].humidity}%`);
-            $drewPoint.append(`${daily[1].dew_point}°`);
+            $drewPoint.append(`${daily[1].dew_point}°f`);
             $pop.append(`${daily[1].pop}%`);
             $windSpeed.append(`${daily[1].wind_speed} mph`);
 
@@ -514,24 +515,24 @@ $(function(){
             //This is for the Basic Info
 
             if(time <= 6){
-                $timeOfDay.append(`${daily[2].temp.morn}°`);
+                $timeOfDay.append(`${daily[2].temp.morn}°f`);
             }if(time > 7 && time <= 14){
-                $timeOfDay.append(`${daily[2].temp.day}°`);
+                $timeOfDay.append(`${daily[2].temp.day}°f`);
             }if(time > 14 && time <= 20){
-                $timeOfDay.append(`${daily[2].temp.eve}°`);
+                $timeOfDay.append(`${daily[2].temp.eve}°f`);
             }if(time > 20){
-                $timeOfDay.append(`${daily[2].temp.night}°`);
+                $timeOfDay.append(`${daily[2].temp.night}°f`);
             }
 
             //Check time and prints feels like data
             if(time <= 6){
-                $feelsLike.append(`Feels like  ${daily[2].feels_like.morn}°`);
+                $feelsLike.append(`Feels like  ${daily[2].feels_like.morn}°f`);
             }if(time > 7 && time <= 14){
-                $feelsLike.append(`Feels like  ${daily[2].feels_like.day}°`);
+                $feelsLike.append(`Feels like  ${daily[2].feels_like.day}°f`);
             }if(time > 14 && time <= 20){
-                $feelsLike.append(`Feels like  ${daily[2].feels_like.eve}°`);
+                $feelsLike.append(`Feels like  ${daily[2].feels_like.eve}°f`);
             }if(time > 20){
-                $feelsLike.append(`Feels like  ${daily[2].feels_like.night}°`);
+                $feelsLike.append(`Feels like  ${daily[2].feels_like.night}°f`);
             }
 
             $headerDay.prepend("Wednesday");
@@ -541,13 +542,13 @@ $(function(){
             }
             
             $discription.append(`${daily[2].weather[0].description}`);
-            $minMax.append(`<p>Min ${daily[2].temp.min}° | Max ${daily[2].temp.max}°</p>`);
+            $minMax.append(`<p>Min ${daily[2].temp.min}°f | Max ${daily[2].temp.max}°f</p>`);
 
             //=====================================================================================//
 
             //This is for the extra data
 
-            $pressure.append(`${daily[2].pressure} hPa`);
+            $pressure.append(`${daily[2].clouds}%`);
             $huminity.append(`${daily[2].humidity}%`);
             $drewPoint.append(`${daily[2].dew_point}°`);
             $pop.append(`${daily[2].pop}%`);
@@ -588,24 +589,24 @@ $(function(){
             //This is for the Basic Info
 
             if(time <= 6){
-                $timeOfDay.append(`${daily[3].temp.morn}°`);
+                $timeOfDay.append(`${daily[3].temp.morn}°f`);
             }if(time > 7 && time <= 14){
-                $timeOfDay.append(`${daily[3].temp.day}°`);
+                $timeOfDay.append(`${daily[3].temp.day}°f`);
             }if(time > 14 && time <= 20){
-                $timeOfDay.append(`${daily[3].temp.eve}°`);
+                $timeOfDay.append(`${daily[3].temp.eve}°f`);
             }if(time > 20){
-                $timeOfDay.append(`${daily[3].temp.night}°`);
+                $timeOfDay.append(`${daily[3].temp.night}°f`);
             }
 
             //Check time and prints feels like data
             if(time <= 6){
-                $feelsLike.append(`Feels like  ${daily[3].feels_like.morn}°`);
+                $feelsLike.append(`Feels like  ${daily[3].feels_like.morn}°f`);
             }if(time > 7 && time <= 14){
-                $feelsLike.append(`Feels like  ${daily[3].feels_like.day}°`);
+                $feelsLike.append(`Feels like  ${daily[3].feels_like.day}°f`);
             }if(time > 14 && time <= 20){
-                $feelsLike.append(`Feels like  ${daily[3].feels_like.eve}°`);
+                $feelsLike.append(`Feels like  ${daily[3].feels_like.eve}°f`);
             }if(time > 20){
-                $feelsLike.append(`Feels like  ${daily[3].feels_like.night}°`);
+                $feelsLike.append(`Feels like  ${daily[3].feels_like.night}°f`);
             }
 
             $headerDay.prepend("Thursday");
@@ -615,13 +616,13 @@ $(function(){
             }
             
             $discription.append(`${daily[3].weather[0].description}`);
-            $minMax.append(`<p>Min ${daily[3].temp.min}° | Max ${daily[3].temp.max}°</p>`);
+            $minMax.append(`<p>Min ${daily[3].temp.min}°f | Max ${daily[3].temp.max}°f</p>`);
 
             //=====================================================================================//
 
             //This is for the extra data
 
-            $pressure.append(`${daily[3].pressure} hPa`);
+            $pressure.append(`${daily[3].clouds}%`);
             $huminity.append(`${daily[3].humidity}%`);
             $drewPoint.append(`${daily[3].dew_point}°`);
             $pop.append(`${daily[3].pop}%`);
@@ -662,24 +663,24 @@ $(function(){
             //This is for the Basic Info
 
             if(time <= 6){
-                $timeOfDay.append(`${daily[4].temp.morn}°`);
+                $timeOfDay.append(`${daily[4].temp.morn}°f`);
             }if(time > 7 && time <= 14){
-                $timeOfDay.append(`${daily[4].temp.day}°`);
+                $timeOfDay.append(`${daily[4].temp.day}°f`);
             }if(time > 14 && time <= 20){
-                $timeOfDay.append(`${daily[4].temp.eve}°`);
+                $timeOfDay.append(`${daily[4].temp.eve}°f`);
             }if(time > 20){
-                $timeOfDay.append(`${daily[4].temp.night}°`);
+                $timeOfDay.append(`${daily[4].temp.night}°f`);
             }
 
             //Check time and prints feels like data
             if(time <= 6){
-                $feelsLike.append(`Feels like  ${daily[4].feels_like.morn}°`);
+                $feelsLike.append(`Feels like  ${daily[4].feels_like.morn}°f`);
             }if(time > 7 && time <= 14){
-                $feelsLike.append(`Feels like  ${daily[4].feels_like.day}°`);
+                $feelsLike.append(`Feels like  ${daily[4].feels_like.day}°f`);
             }if(time > 14 && time <= 20){
-                $feelsLike.append(`Feels like  ${daily[4].feels_like.eve}°`);
+                $feelsLike.append(`Feels like  ${daily[4].feels_like.eve}°f`);
             }if(time > 20){
-                $feelsLike.append(`Feels like  ${daily[4].feels_like.night}°`);
+                $feelsLike.append(`Feels like  ${daily[4].feels_like.night}°f`);
             }
 
             $headerDay.prepend("Friday");
@@ -689,13 +690,13 @@ $(function(){
             }
             
             $discription.append(`${daily[4].weather[0].description}`);
-            $minMax.append(`<p>Min ${daily[4].temp.min}° | Max ${daily[4].temp.max}°</p>`);
+            $minMax.append(`<p>Min ${daily[4].temp.min}°f | Max ${daily[4].temp.max}°f</p>`);
 
             //=====================================================================================//
 
             //This is for the extra data
 
-            $pressure.append(`${daily[4].pressure} hPa`);
+            $pressure.append(`${daily[4].clouds}%`);
             $huminity.append(`${daily[4].humidity}%`);
             $drewPoint.append(`${daily[4].dew_point}°`);
             $pop.append(`${daily[4].pop}%`);
@@ -736,24 +737,24 @@ $(function(){
             //This is for the Basic Info
 
             if(time <= 6){
-                $timeOfDay.append(`${daily[5].temp.morn}°`);
+                $timeOfDay.append(`${daily[5].temp.morn}°f`);
             }if(time > 7 && time <= 14){
-                $timeOfDay.append(`${daily[5].temp.day}°`);
+                $timeOfDay.append(`${daily[5].temp.day}°f`);
             }if(time > 14 && time <= 20){
-                $timeOfDay.append(`${daily[5].temp.eve}°`);
+                $timeOfDay.append(`${daily[5].temp.eve}°f`);
             }if(time > 20){
-                $timeOfDay.append(`${daily[5].temp.night}°`);
+                $timeOfDay.append(`${daily[5].temp.night}°f`);
             }
 
             //Check time and prints feels like data
             if(time <= 6){
-                $feelsLike.append(`Feels like  ${daily[5].feels_like.morn}°`);
+                $feelsLike.append(`Feels like  ${daily[5].feels_like.morn}°f`);
             }if(time > 7 && time <= 14){
-                $feelsLike.append(`Feels like  ${daily[5].feels_like.day}°`);
+                $feelsLike.append(`Feels like  ${daily[5].feels_like.day}°f`);
             }if(time > 14 && time <= 20){
-                $feelsLike.append(`Feels like  ${daily[5].feels_like.eve}°`);
+                $feelsLike.append(`Feels like  ${daily[5].feels_like.eve}°f`);
             }if(time > 20){
-                $feelsLike.append(`Feels like  ${daily[5].feels_like.night}°`);
+                $feelsLike.append(`Feels like  ${daily[5].feels_like.night}°f`);
             }
 
             $headerDay.prepend("Saturday");
@@ -763,13 +764,13 @@ $(function(){
             }
             
             $discription.append(`${daily[5].weather[0].description}`);
-            $minMax.append(`<p>Min ${daily[5].temp.min}° | Max ${daily[5].temp.max}°</p>`);
+            $minMax.append(`<p>Min ${daily[5].temp.min}°f | Max ${daily[5].temp.max}°f</p>`);
 
             //=====================================================================================//
 
             //This is for the extra data
 
-            $pressure.append(`${daily[5].pressure} hPa`);
+            $pressure.append(`${daily[5].clouds}%`);
             $huminity.append(`${daily[5].humidity}%`);
             $drewPoint.append(`${daily[5].dew_point}°`);
             $pop.append(`${daily[5].pop}%`);
@@ -810,24 +811,24 @@ $(function(){
             //This is for the Basic Info
 
             if(time <= 6){
-                $timeOfDay.append(`${daily[6].temp.morn}°`);
+                $timeOfDay.append(`${daily[6].temp.morn}°f`);
             }if(time > 7 && time <= 14){
-                $timeOfDay.append(`${daily[6].temp.day}°`);
+                $timeOfDay.append(`${daily[6].temp.day}°f`);
             }if(time > 14 && time <= 20){
-                $timeOfDay.append(`${daily[6].temp.eve}°`);
+                $timeOfDay.append(`${daily[6].temp.eve}°f`);
             }if(time > 20){
-                $timeOfDay.append(`${daily[6].temp.night}°`);
+                $timeOfDay.append(`${daily[6].temp.night}°f`);
             }
 
             //Check time and prints feels like data
             if(time <= 6){
-                $feelsLike.append(`Feels like  ${daily[6].feels_like.morn}°`);
+                $feelsLike.append(`Feels like  ${daily[6].feels_like.morn}°f`);
             }if(time > 7 && time <= 14){
-                $feelsLike.append(`Feels like  ${daily[6].feels_like.day}°`);
+                $feelsLike.append(`Feels like  ${daily[6].feels_like.day}°f`);
             }if(time > 14 && time <= 20){
-                $feelsLike.append(`Feels like  ${daily[6].feels_like.eve}°`);
+                $feelsLike.append(`Feels like  ${daily[6].feels_like.eve}°f`);
             }if(time > 20){
-                $feelsLike.append(`Feels like  ${daily[6].feels_like.night}°`);
+                $feelsLike.append(`Feels like  ${daily[6].feels_like.night}°f`);
             }
 
             $headerDay.prepend("Sunday");
@@ -837,13 +838,13 @@ $(function(){
             }
             
             $discription.append(`${daily[6].weather[0].description}`);
-            $minMax.append(`<p>Min ${daily[6].temp.min}° | Max ${daily[6].temp.max}°</p>`);
+            $minMax.append(`<p>Min ${daily[6].temp.min}°f | Max ${daily[6].temp.max}°f</p>`);
 
             //=====================================================================================//
 
             //This is for the extra data
 
-            $pressure.append(`${daily[6].pressure} hPa`);
+            $pressure.append(`${daily[6].clouds}%`);
             $huminity.append(`${daily[6].humidity}%`);
             $drewPoint.append(`${daily[6].dew_point}°`);
             $pop.append(`${daily[6].pop}%`);
@@ -884,24 +885,24 @@ $(function(){
             //This is for the Basic Info
 
             if(time <= 6){
-                $timeOfDay.append(`${daily[7].temp.morn}°`);
+                $timeOfDay.append(`${daily[7].temp.morn}°f`);
             }if(time > 7 && time <= 14){
-                $timeOfDay.append(`${daily[7].temp.day}°`);
+                $timeOfDay.append(`${daily[7].temp.day}°f`);
             }if(time > 14 && time <= 20){
-                $timeOfDay.append(`${daily[7].temp.eve}°`);
+                $timeOfDay.append(`${daily[7].temp.eve}°f`);
             }if(time > 20){
-                $timeOfDay.append(`${daily[7].temp.night}°`);
+                $timeOfDay.append(`${daily[7].temp.night}°f`);
             }
 
             //Check time and prints feels like data
             if(time <= 6){
-                $feelsLike.append(`Feels like  ${daily[7].feels_like.morn}°`);
+                $feelsLike.append(`Feels like  ${daily[7].feels_like.morn}°f`);
             }if(time > 7 && time <= 14){
-                $feelsLike.append(`Feels like  ${daily[7].feels_like.day}°`);
+                $feelsLike.append(`Feels like  ${daily[7].feels_like.day}°f`);
             }if(time > 14 && time <= 20){
-                $feelsLike.append(`Feels like  ${daily[7].feels_like.eve}°`);
+                $feelsLike.append(`Feels like  ${daily[7].feels_like.eve}°f`);
             }if(time > 20){
-                $feelsLike.append(`Feels like  ${daily[7].feels_like.night}°`);
+                $feelsLike.append(`Feels like  ${daily[7].feels_like.night}°f`);
             }
 
             $headerDay.prepend("Monday");
@@ -911,13 +912,13 @@ $(function(){
             }
             
             $discription.append(`${daily[7].weather[0].description}`);
-            $minMax.append(`<p>Min ${daily[7].temp.min}° | Max ${daily[7].temp.max}°</p>`);
+            $minMax.append(`<p>Min ${daily[7].temp.min}°f | Max ${daily[7].temp.max}°f</p>`);
 
             //=====================================================================================//
 
             //This is for the extra data
 
-            $pressure.append(`${daily[7].pressure} hPa`);
+            $pressure.append(`${daily[7].clouds}%`);
             $huminity.append(`${daily[7].humidity}%`);
             $drewPoint.append(`${daily[7].dew_point}°`);
             $pop.append(`${daily[7].pop}%`);
@@ -1001,50 +1002,50 @@ $(function(){
     //Pushes simple date for the 7-day forcast (static)
     function forcast(){
         $day0Header.append("Mon");
-        $day0High.append(`H: ${daily[0].temp.max}°`);
-        $day0Low.append(`L: ${daily[0].temp.min}°`);
+        $day0High.append(`H: ${daily[0].temp.max}°f`);
+        $day0Low.append(`L: ${daily[0].temp.min}°f`);
         $discription0.append(`${daily[0].weather[0].description}`);
         $pop0.prepend(`${daily[0].pop}%`);
 
         $day1Header.append("Tue");
-        $day1High.append(`H: ${daily[1].temp.max}°`);
-        $day1Low.append(`L: ${daily[1].temp.min}°`);
+        $day1High.append(`H: ${daily[1].temp.max}f°`);
+        $day1Low.append(`L: ${daily[1].temp.min}°f`);
         $discription1.append(`${daily[1].weather[0].description}`);
         $pop1.prepend(`${daily[1].pop}%`);
 
         $day2Header.append("Wed");
-        $day2High.append(`H: ${daily[2].temp.max}°`);
-        $day2Low.append(`L: ${daily[2].temp.min}°`);
+        $day2High.append(`H: ${daily[2].temp.max}°f`);
+        $day2Low.append(`L: ${daily[2].temp.min}°f`);
         $discription2.append(`${daily[2].weather[0].description}`);
         $pop2.prepend(`${daily[2].pop}%`);
 
         $day3Header.append("Thu");
-        $day3High.append(`H: ${daily[3].temp.max}°`);
-        $day3Low.append(`L: ${daily[3].temp.min}°`);
+        $day3High.append(`H: ${daily[3].temp.max}°f`);
+        $day3Low.append(`L: ${daily[3].temp.min}°f`);
         $discription3.append(`${daily[3].weather[0].description}`);
         $pop3.prepend(`${daily[3].pop}%`);
 
         $day4Header.append("Fri");
-        $day4High.append(`H: ${daily[4].temp.max}°`);
-        $day4Low.append(`L: ${daily[4].temp.min}°`);
+        $day4High.append(`H: ${daily[4].temp.max}°f`);
+        $day4Low.append(`L: ${daily[4].temp.min}°f`);
         $discription4.append(`${daily[4].weather[0].description}`);
         $pop4.prepend(`${daily[4].pop}%`);
 
         $day5Header.append("Sat");
-        $day5High.append(`H: ${daily[5].temp.max}°`);
-        $day5Low.append(`L: ${daily[5].temp.min}°`);
+        $day5High.append(`H: ${daily[5].temp.max}°f`);
+        $day5Low.append(`L: ${daily[5].temp.min}°f`);
         $discription5.append(`${daily[5].weather[0].description}`);
         $pop5.prepend(`${daily[5].pop}%`);
 
         $day6Header.append("Sun");
-        $day6High.append(`H: ${daily[6].temp.max}°`);
-        $day6Low.append(`L: ${daily[6].temp.min}°`);
+        $day6High.append(`H: ${daily[6].temp.max}°f`);
+        $day6Low.append(`L: ${daily[6].temp.min}°f`);
         $discription6.append(`${daily[6].weather[0].description}`);
         $pop6.prepend(`${daily[6].pop}%`);
 
         $day7Header.append("Mon");
-        $day7High.append(`H: ${daily[7].temp.max}°`);
-        $day7Low.append(`L: ${daily[7].temp.min}°`);
+        $day7High.append(`H: ${daily[7].temp.max}°f`);
+        $day7Low.append(`L: ${daily[7].temp.min}°f`);
         $discription7.append(`${daily[7].weather[0].description}`);
         $pop7.prepend(`${daily[7].pop}%`);
     }
