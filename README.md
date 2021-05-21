@@ -60,5 +60,7 @@ _______________________________________________________________
 #### GitHub Link
 
 > [GitHub Pages](https://fernandorodriguez23.github.io/WeatherProject/)
+>
+> [WireFrame](wireFrame.PNG)
 
 
