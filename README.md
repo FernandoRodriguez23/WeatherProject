@@ -57,6 +57,82 @@ _______________________________________________________________
 >
 > BootStrap will be a vertical 1 by 1
 
+### Daliy Log
+
+> 2 day intervals
+___________________________________________
+
+#### Day 1
+
+> Inital Commit
+>
+> Setting up JS
+>
+> Setting up HTML
+>
+> Setting up SCSS
+
+___________________________________________
+
+#### Day 2
+
+> JS functions for Monday
+>
+> HTML bootstrap Basic / General Info
+>
+> BackGround Gradient
+
+___________________________________________
+
+#### Day 3
+
+> JS function for 8-day forcast
+>
+> Rest of Bootstrap
+>
+> NavBar Completed
+>
+> Pushing Data to HTML
+
+___________________________________________
+
+#### Day 4
+
+> JS function for Tue - Mon
+>
+> Footer started 
+>
+> SCSS Icons
+>
+> Favicon
+
+___________________________________________
+
+#### Day 5
+
+> JS improvised HTML page switching
+>
+> Footer Completed
+>
+> SCSS Icons completed
+>
+> WhiteSpace for Columns
+
+___________________________________________
+
+#### Day 6
+
+> JS Completed, mostly
+>
+> SCSS completed
+>
+> HTML Completed
+>
+> Read.md
+
+___________________________________________
+
+
 #### GitHub Link
 
 > [GitHub Pages](https://fernandorodriguez23.github.io/WeatherProject/)
